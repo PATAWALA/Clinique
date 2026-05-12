@@ -2,27 +2,22 @@
 import { ClinicConfig } from '../types';
 
 const clinicConfig: ClinicConfig = {
-  // REMPLACEZ CES INFORMATIONS POUR CHAQUE CLINIQUE
+  // CHANGEZ CES INFORMATIONS POUR CHAQUE CLINIQUE
   
-  // Nom et infos de base
-  name: "Clinique Santé Plus",
-  subtitle: "Centre Médical Pluridisciplinaire",
+  name: "Votre Clinique en ligne",  // ✅ Changé ici
+  subtitle: "Votre partenaire digital médical",
   city: "Paris",
   address: "123 Avenue des Champs-Élysées, 75008 Paris",
   
-  // Contact
   phone: "+33 1 23 45 67 89",
-  whatsapp: "33612345678", // Format international sans le +
-  email: "contact@cliniquesanteplus.fr",
+  whatsapp: "33612345678",
+  email: "contact@votrecliniqueenligne.fr",  // ✅ Changé ici
   
-  // Couleurs du site
   primaryColor: "blue",
   secondaryColor: "green",
   
-  // Heures d'ouverture
-  hours: "Lun-Ven: 8h-20h | Sam: 9h-13h",
+  hours: "Lun-Ven: 9h-19h | Sam: 10h-16h",
   
-  // Services de la clinique
   services: [
     "Médecine Générale",
     "Cardiologie",
@@ -31,44 +26,41 @@ const clinicConfig: ClinicConfig = {
     "Kinésithérapie"
   ],
   
-  // Statistiques personnalisées
   stats: {
     patientsLost: 50,
     callsLost: 30,
-    revenueLost: 5000,
-    annualLoss: 60000,
+    revenueLost: 90000,
+    annualLoss: 350000,
   },
   
-  // Témoignages (mettez vos vrais témoignages ici)
   testimonials: [
     {
       name: "Dr. Sophie Martin",
-      clinic: "Clinique Santé Plus",
+      clinic: "Clinique Saint-Louis",
       city: "Paris",
-      text: "Depuis que nous avons un site professionnel, nous recevons 3 fois plus d'appels de nouveaux patients. Notre visibilité sur Google a tout changé.",
+      text: "Grâce à Votre Clinique en ligne, nous avons multiplié par 3 nos nouveaux patients en seulement 2 mois. Le site est magnifique et professionnel.",
       result: "+200% de nouveaux patients"
     },
     {
       name: "Dr. Pierre Dubois",
       clinic: "Centre Médical Moderne",
       city: "Lyon",
-      text: "La réservation en ligne nous fait gagner un temps incroyable. Les patients adorent pouvoir prendre rendez-vous directement sur leur téléphone.",
+      text: "L'équipe de Votre Clinique en ligne a parfaitement compris nos besoins. La réservation en ligne nous fait gagner un temps précieux chaque jour.",
       result: "90% de rendez-vous en ligne"
     },
     {
       name: "Dr. Marie Laurent",
       clinic: "Clinique Familiale",
       city: "Marseille",
-      text: "Notre crédibilité a complètement changé. Les patients nous disent qu'ils nous ont choisis grâce à notre site moderne et nos avis en ligne.",
+      text: "Notre crédibilité a complètement changé. Les patients nous font confiance dès le premier regard grâce à notre site professionnel.",
       result: "Note Google de 4.8/5"
     }
   ],
   
-  // Réseaux sociaux
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    linkedin: "https://linkedin.com/"
+    facebook: "https://web.facebook.com/Patawala",
+    instagram: "https://www.instagram.com/patawalaabdoulaye1900/",
+    linkedin: "https://www.linkedin.com/in/abdoulaye-patawala-84b138381"
   }
 };
 

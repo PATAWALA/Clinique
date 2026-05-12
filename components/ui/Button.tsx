@@ -9,17 +9,16 @@ export default function Button({
   className = "",
   target = "",
   onClick,
-  type = "link" 
 }: ButtonProps) {
   
-  const baseClasses = "inline-flex items-center px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105";
+  const baseClasses = "inline-flex items-center rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-sm md:text-base px-5 md:px-8 py-2.5 md:py-4";
   
   const primaryClasses = "bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-lg hover:shadow-xl";
   const secondaryClasses = "bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50";
   
   const classes = `${baseClasses} ${primary ? primaryClasses : secondaryClasses} ${className}`;
   
-  if (type === "button") {
+  if (onClick) {
     return (
       <button onClick={onClick} className={classes}>
         {children}

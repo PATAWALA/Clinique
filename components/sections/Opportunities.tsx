@@ -50,7 +50,7 @@ export default function Opportunities() {
           className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center"
         >
           <div className="text-5xl mb-4">💶</div>
-          <div className="text-5xl font-bold text-purple-600 mb-4">{clinicConfig.stats.revenueLost}€+</div>
+          <div className="text-5xl font-bold text-purple-600 mb-4">{clinicConfig.stats.revenueLost} FCFA+</div>
           <div className="text-xl font-semibold text-gray-900 mb-2">Revenus perdus</div>
           <p className="text-gray-600">
             Estimation des revenus perdus chaque mois à cause de l'absence de visibilité en ligne
