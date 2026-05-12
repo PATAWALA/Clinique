@@ -6,12 +6,11 @@ const clinicConfig: ClinicConfig = {
   
   name: "Votre Clinique en ligne",  // ✅ Changé ici
   subtitle: "Votre partenaire digital médical",
-  city: "Paris",
-  address: "123 Avenue des Champs-Élysées, 75008 Paris",
+  city: "Cotonou",
   
-  phone: "+33 1 23 45 67 89",
-  whatsapp: "33612345678",
-  email: "contact@votrecliniqueenligne.fr",  // ✅ Changé ici
+  phone: "+229 62 29 80 90",
+  whatsapp: "22962298090",
+  email: "patawalaabdoulaye2003@gmail.com",  // ✅ Changé ici
   
   primaryColor: "blue",
   secondaryColor: "green",
@@ -29,7 +28,7 @@ const clinicConfig: ClinicConfig = {
   stats: {
     patientsLost: 50,
     callsLost: 30,
-    revenueLost: 90000,
+    revenueLost: 1080000,
     annualLoss: 350000,
   },
   

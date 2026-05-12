@@ -4,7 +4,6 @@ export interface ClinicConfig {
   name: string;
   subtitle: string;
   city: string;
-  address: string;
   phone: string;
   whatsapp: string;
   email: string;

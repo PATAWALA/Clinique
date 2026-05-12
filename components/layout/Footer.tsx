@@ -90,8 +90,6 @@ export default function Footer() {
               <li className="flex items-start space-x-3 text-gray-400 pt-4 border-t border-gray-800">
                 <span className="text-2xl">📍</span>
                 <div>
-                  <p className="text-sm text-gray-500">Adresse</p>
-                  <p className="font-medium">{clinicConfig.address}</p>
                   <p className="text-sm text-gray-500 mt-1">{clinicConfig.hours}</p>
                 </div>
               </li>
