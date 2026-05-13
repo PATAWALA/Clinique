@@ -5,7 +5,7 @@ const config = {
   address: "123 Avenue des Champs-Élysées, 75008 Paris",
   phone: "+22962278090",
   whatsapp: "22962278090",
-  email: "contact@votrecliniqueenligne.fr",
+  email: "patawalaabdoulaye2003@gmail.com",
   hours: "Lun-Ven: 8h-20h | Sam: 9h-13h",
   stats: {
     patientsLost: 50,
