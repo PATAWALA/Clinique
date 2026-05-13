@@ -1,21 +1,10 @@
 /* styles/globals.css */
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply antialiased;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-@layer components {
-  .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500;
-  }
+body {
+  background: #f9fafb;
 }
