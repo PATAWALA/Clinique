@@ -3,8 +3,8 @@ const config = {
   subtitle: "Centre Médical Pluridisciplinaire",
   city: "Paris",
   address: "123 Avenue des Champs-Élysées, 75008 Paris",
-  phone: "+33 1 23 45 67 89",
-  whatsapp: "33612345678",
+  phone: "+22962278090",
+  whatsapp: "22962278090",
   email: "contact@votrecliniqueenligne.fr",
   hours: "Lun-Ven: 8h-20h | Sam: 9h-13h",
   stats: {

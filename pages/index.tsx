@@ -63,10 +63,10 @@ function Navbar() {
 // ==================== HERO ====================
 function Hero() {
   return (
-    <section className="pt-20 md:pt-12 pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative w-full pt-20 md:pt-24 pb-16 md:pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="max-w-4xl mx-auto text-center"
+          className="w-full max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -92,7 +92,7 @@ function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`https://wa.me/${config.whatsapp}`} target="_blank" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg">
-              <span className="mr-2 text-xl">💬</span> Parler à un expert WhatsApp
+              <span className="mr-2 text-xl">💬</span> Parler à un expert
             </a>
             <a href="#problems" className="inline-flex items-center justify-center bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all">
               Voir les opportunités perdues
@@ -136,19 +136,19 @@ function Problems() {
   ];
 
   return (
-    <section id="problems" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="problems" className="relative w-full py-16 sm:py-24 bg-white">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-16"
+          className="w-full text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Les conséquences d'une absence digitale</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">Ce qui arrive quand votre clinique n'est pas visible en ligne</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {problems.map((p, i) => (
             <motion.div
               key={i}
@@ -174,48 +174,50 @@ function Problems() {
 // ==================== COMPARISON ====================
 function Comparison() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-100 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full py-16 sm:py-24 bg-gradient-to-br from-gray-100 to-blue-50">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-16"
+          className="w-full text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">La différence est frappante</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Voyez ce que votre clinique gagne avec une présence digitale professionnelle</p>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4">La différence est frappante</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Voyez ce que votre clinique gagne avec une présence digitale professionnelle</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Colonne SANS - CORRIGÉE */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full bg-white rounded-2xl shadow-xl overflow-hidden h-full"
           >
             <div className="bg-red-500 text-white text-center py-4 font-bold text-lg">❌ Sans site web</div>
-            <div className="p-8 space-y-4">
+            <div className="p-6 sm:p-8 space-y-3 sm:space-y-4">
               {["Patients qui ne vous trouvent pas en ligne", "Aucune crédibilité numérique", "Pas de prise de rendez-vous en ligne", "Aucune présence sur Google Maps", "Image dépassée et peu professionnelle", "Perte de patients au profit des concurrents", "Communication limitée avec les patients"].map((item, i) => (
                 <div key={i} className="flex items-start space-x-3">
                   <span className="text-red-500 font-bold flex-shrink-0">✕</span>
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-sm sm:text-base text-gray-700">{item}</span>
                 </div>
               ))}
             </div>
           </motion.div>
 
+          {/* Colonne AVEC - CORRIGÉE */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full bg-white rounded-2xl shadow-xl overflow-hidden h-full"
           >
             <div className="bg-gradient-to-r from-blue-600 to-green-500 text-white text-center py-4 font-bold text-lg">✅ Avec un site professionnel</div>
-            <div className="p-8 space-y-4">
+            <div className="p-6 sm:p-8 space-y-3 sm:space-y-4">
               {["Visible sur Google 24h/24 et 7j/7", "Crédibilité instantanée et professionnalisme", "Réservation en ligne simple et rapide", "Présence optimisée sur Google Maps", "Image moderne et rassurante", "Plus de patients que vos concurrents", "Communication WhatsApp intégrée"].map((item, i) => (
                 <div key={i} className="flex items-start space-x-3">
                   <span className="text-green-500 font-bold flex-shrink-0">✓</span>
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-sm sm:text-base text-gray-700">{item}</span>
                 </div>
               ))}
             </div>
@@ -225,7 +227,6 @@ function Comparison() {
     </section>
   );
 }
-
 // ==================== BENEFITS ====================
 function Benefits() {
   const benefits = [
