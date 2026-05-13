@@ -553,7 +553,6 @@ export default function Home() {
         <Problems />
         <Comparison />
         <Benefits />
-        <Mockups />
         <Opportunities />
         <Testimonials />
         <FinalCTA />
