@@ -63,7 +63,7 @@ function Navbar() {
 // ==================== HERO ====================
 function Hero() {
   return (
-    <section className="pt-28 md:pt-36 pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <section className="pt-20 md:pt-12 pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="max-w-4xl mx-auto text-center"
