@@ -76,7 +76,7 @@ function Hero() {
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            ⚠️ Alerte : Votre clinique est invisible en ligne
+            ⚠️ Alerte : Votre clinique est invisible en ligne. 
           </motion.div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -415,6 +415,240 @@ function Testimonials() {
   );
 }
 
+// ==================== EXEMPLES DE CLINIQUES EN LIGNE ====================
+function OnlineClinicsExamples() {
+  const clinics = [
+    {
+      name: "Polyclinelle Wossinu Gbogbo",
+      url: "https://polyclinelle-wossinu-gbogbo.com",
+      description: "Site moderne avec présentation des médecins, horaires et galerie photos",
+      features: ["Présentation des spécialistes", "Horaires visibles", "Galerie photos", "Contact facile"],
+      icon: "🏥",
+      color: "from-blue-500 to-green-500"
+    },
+    {
+      name: "Clinique Sainte-Hèlène",
+      url: "https://www.cliniquesaintehelene.com",
+      description: "Design professionnel qui inspire confiance aux patients dès la première visite",
+      features: ["Design moderne", "Prise de RDV en ligne", "Avis patients", "Plan d'accès Google Maps"],
+      icon: "🏨",
+      color: "from-purple-500 to-blue-500"
+    },
+    {
+      name: "Clinique Sainte Famille",
+      url: "https://www.cliniquesaintefamille.com/",
+      description: "Site complet avec toutes les informations que les patients recherchent",
+      features: ["Services détaillés", "Équipe médicale", "Urgences 24/7", "Blog santé"],
+      icon: "🩺",
+      color: "from-red-400 to-orange-500"
+    },
+    {
+      name: "Centre Médical LA RETINE",
+      url: "https://cmlaretine.com",
+      description: "Plateforme digitale complète pour attirer et rassurer les nouveaux patients",
+      features: ["WhatsApp intégré", "Témoignages vidéo", "Visite virtuelle", "FAQ patients"],
+      icon: "💊",
+      color: "from-green-400 to-teal-400"
+    }
+  ];
+
+  const stats = [
+    { value: "83%", label: "des cliniques concurrentes ont déjà un site web", icon: "📊" },
+    { value: "3x", label: "plus de patients qu'une clinique sans présence en ligne", icon: "📈" },
+    { value: "92%", label: "des patients font confiance à une clinique visible sur internet", icon: "⭐" },
+    { value: "24/7", label: "votre clinique peut être trouvée à toute heure", icon: "🕐" }
+  ];
+
+  return (
+    <section className="relative w-full py-16 sm:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* ALERTE - En-tête provocateur */}
+        <motion.div 
+          className="w-full text-center mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div
+            className="inline-block bg-red-100 text-red-700 px-6 py-3 rounded-full text-lg font-semibold mb-6 border-2 border-red-200"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          >
+            ⚠️ Regardez vos concurrents... Ils sont déjà en ligne !
+          </motion.div>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Elles l'ont fait...<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">
+              Pourquoi pas vous ?
+            </span>
+          </h2>
+          
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Pendant que vous hésitez encore, ces cliniques attirent chaque jour 
+            <span className="font-bold text-red-500"> les patients qui devraient être les vôtres</span>
+          </p>
+        </motion.div>
+
+        {/* Stats choc */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {stats.map((stat, i) => (
+            <div key={i} className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg text-center border border-gray-100">
+              <div className="text-3xl sm:text-4xl mb-3">{stat.icon}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+              <p className="text-xs sm:text-sm text-gray-600">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Grille des cliniques exemples */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+          {clinics.map((clinic, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.15 }}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group"
+            >
+              {/* Barre du navigateur simulée */}
+              <div className="bg-gray-100 px-4 py-2.5 flex items-center space-x-2 border-b border-gray-200">
+                <div className="flex space-x-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                </div>
+                <div className="flex-1 mx-3">
+                  <div className="bg-white rounded-full px-3 py-1 text-xs text-gray-500 flex items-center space-x-1.5">
+                    <span>🔒</span>
+                    <span className="truncate">{clinic.url.replace('https://', '')}</span>
+                  </div>
+                </div>
+                <div className="flex space-x-1">
+                  <div className="w-4 h-4 rounded-full bg-gray-300"></div>
+                  <div className="w-4 h-4 rounded-full bg-gray-300"></div>
+                </div>
+              </div>
+
+              {/* Contenu de la carte */}
+              <div className="p-6 sm:p-8">
+                {/* En-tête de la clinique */}
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${clinic.color} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 text-3xl`}>
+                    {clinic.icon}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-xl sm:text-2xl text-gray-900 mb-1">{clinic.name}</h3>
+                    <p className="text-gray-500 text-sm mb-2">{clinic.description}</p>
+                    <a 
+                      href={clinic.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group/link"
+                    >
+                      <span>Visiter le site</span>
+                      <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Fonctionnalités */}
+                <div className="space-y-2">
+                  <div className="text-sm font-semibold text-gray-700 mb-3">✅ Ce qu'elles proposent :</div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {clinic.features.map((feature, j) => (
+                      <div key={j} className="flex items-center space-x-2 bg-green-50 rounded-lg px-3 py-2">
+                        <span className="text-green-500 text-xs">✓</span>
+                        <span className="text-xs text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Barre de résultat */}
+              <div className="bg-gradient-to-r from-blue-600 to-green-500 px-6 py-3 flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-white text-sm">
+                  <span>🟢</span>
+                  <span className="font-semibold">En ligne et visible</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-white/90 text-xs">📱 Mobile</span>
+                  <span className="text-white/90 text-xs">🔍 Google</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Message de conclusion */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-3xl p-8 sm:p-12 text-white max-w-4xl mx-auto shadow-2xl">
+            <div className="text-5xl mb-4">🎯</div>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              La question n'est plus "Pourquoi avoir un site ?"
+            </h3>
+            <p className="text-xl sm:text-2xl font-bold mb-6 text-yellow-200">
+              Mais plutôt : "Combien de patients perdez-vous chaque jour sans site web ?"
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-3xl mb-2">👥</div>
+                <div className="font-bold text-2xl mb-1">+200</div>
+                <div className="text-sm opacity-90">Patients potentiels perdus par mois</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-3xl mb-2">💰</div>
+                <div className="font-bold text-2xl mb-1">+5 000 000 FCFA</div>
+                <div className="text-sm opacity-90">Revenus perdus par mois</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <div className="text-3xl mb-2">🏆</div>
+                <div className="font-bold text-2xl mb-1">Vos concurrents</div>
+                <div className="text-sm opacity-90">Captent ces patients</div>
+              </div>
+            </div>
+
+            <p className="text-lg mb-8 text-white/90">
+              Toutes ces cliniques ont fait le choix d'être visibles. 
+              <br className="hidden sm:block" />
+              <span className="font-bold text-white">Ne soyez pas la dernière.</span>
+            </p>
+
+            <a
+              href={`https://wa.me/${config.whatsapp}`}
+              target="_blank"
+              className="inline-flex items-center bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold px-8 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-xl transition-all shadow-xl hover:scale-105"
+            >
+              <span className="mr-3 text-2xl">💬</span> Je veux mon site comme eux - Parler à un expert
+            </a>
+            
+            <p className="mt-4 text-white/70 text-sm">
+              ⚡ Réponse en moins de 5 minutes sur WhatsApp
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 // ==================== FINAL CTA ====================
 function FinalCTA() {
   return (
@@ -556,6 +790,7 @@ export default function Home() {
         <Benefits />
         <Opportunities />
         <Testimonials />
+        <OnlineClinicsExamples />
         <FinalCTA />
       </main>
 
