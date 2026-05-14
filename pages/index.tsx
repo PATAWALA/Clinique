@@ -190,7 +190,7 @@ function About() {
             Celui qui va transformer votre clinique
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-            15+ cliniques m'ont déjà fait confiance. Voici pourquoi la vôtre est la prochaine.
+            50+ cliniques m'ont déjà fait confiance. Voici pourquoi la vôtre est la prochaine.
           </p>
         </motion.div>
 
@@ -221,7 +221,7 @@ function About() {
               </div>
               
               <div className="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl p-2 sm:p-3 md:p-4 text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">15+</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">50+</div>
                 <div className="text-xs sm:text-sm text-gray-600">cliniques</div>
               </div>
             </div>
@@ -345,7 +345,7 @@ function About() {
         >
           {[
             { number: "3+", label: "Années à vos côtés", icon: "📅" },
-            { number: "10+", label: "Cliniques propulsées", icon: "🏥" },
+            { number: "50+", label: "Cliniques propulsées", icon: "🏥" },
             { number: "100%", label: "Clients satisfaits", icon: "⭐" },
             { number: "24h", label: "Disponibilité", icon: "⚡" }
           ].map((stat, i) => (
