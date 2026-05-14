@@ -183,18 +183,21 @@ function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <span className="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+            🏆 Expert reconnu
+          </span>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
-            Qui se cache derrière votre site web
+            Celui qui va transformer votre clinique
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-            Un expert passionné par la santé et le digital, à votre service depuis 3 ans
+            50+ cliniques m'ont déjà fait confiance. Voici pourquoi la vôtre est la prochaine.
           </p>
         </motion.div>
 
-        {/* Contenu principal - colonnes sur desktop, empilé sur mobile */}
+        {/* Contenu principal */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           
-          {/* Photo - centrée sur mobile, gauche sur desktop */}
+          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -202,25 +205,21 @@ function About() {
             className="w-full lg:w-1/2 flex justify-center lg:justify-end"
           >
             <div className="relative inline-block">
-              {/* Fond décoratif */}
               <div className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl"></div>
               
-              {/* Image */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="/images/moi.jpeg" 
-                  alt="Abdoulaye Patawala - Expert en création de sites web pour cliniques"
+                  alt="Abdoulaye Patawala - Expert sites web cliniques"
                   className="w-full h-full object-cover"
                 />
               </div>
               
-              {/* Badge années */}
               <div className="absolute -bottom-3 -right-3 bg-white rounded-xl shadow-xl p-2 sm:p-3 md:p-4 text-center">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">3+</div>
-                <div className="text-xs sm:text-sm text-gray-600">années</div>
+                <div className="text-xs sm:text-sm text-gray-600">ans d'impact</div>
               </div>
               
-              {/* Badge cliniques */}
               <div className="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl p-2 sm:p-3 md:p-4 text-center">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">50+</div>
                 <div className="text-xs sm:text-sm text-gray-600">cliniques</div>
@@ -228,47 +227,83 @@ function About() {
             </div>
           </motion.div>
 
-          {/* Bio - dessous sur mobile, droite sur desktop */}
+          {/* Bio puissante */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="w-full lg:w-1/2 space-y-4 md:space-y-6"
           >
-            {/* Nom et titre */}
+            {/* Nom et accroche */}
             <div className="text-center lg:text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">
                 Abdoulaye Patawala
               </h3>
               <p className="text-blue-600 font-semibold text-sm md:text-lg">
-                Expert en création de sites web pour cliniques médicales
+                Expert en sites web pour cliniques • 3 ans d'expérience
               </p>
             </div>
 
-            {/* Texte bio */}
-            <div className="space-y-3 md:space-y-4 text-gray-700 text-sm md:text-lg leading-relaxed">
-              <p>
-                Depuis <span className="font-semibold">3 ans</span>, j'ai créé des{" "}
-                <span className="font-semibold">dizaines de sites web</span> pour des cliniques 
-                qui souhaitent développer leur activité et attirer plus de patients.
+            {/* Corps du message - PLUS PUNCHY */}
+            <div className="space-y-4 text-gray-700 text-sm md:text-lg leading-relaxed">
+              
+              {/* Problème → Solution */}
+              <div className="bg-red-50 border-l-4 border-red-400 p-3 md:p-4 rounded-r-lg">
+                <p className="font-semibold text-red-800 text-sm md:text-base">
+                  🚨 Le problème que vivent la plupart des cliniques :
+                </p>
+                <p className="text-red-700 text-xs md:text-sm mt-1">
+                  Elles sont excellentes pour soigner, mais invisibles sur Internet. 
+                  Résultat : leurs concurrents moins compétents prennent tous les patients.
+                </p>
+              </div>
+
+              {/* Présentation percutante */}
+              <p className="font-medium">
+                Je m'appelle Abdoulaye. Depuis 3 ans,{" "}
+                <span className="font-bold text-blue-600">
+                  j'ai aidé plus de 50 cliniques à remplir leurs agendas
+                </span>{" "}
+                grâce à des sites web qui attirent, rassurent et convertissent les patients.
               </p>
               
+              {/* Pourquoi la santé */}
               <p>
-                Expert technique en création de sites web, il y a un univers qui me passionne plus 
-                que tout : <span className="font-semibold text-blue-600">la santé</span>.
+                Dans le digital, j'aurais pu choisir n'importe quel secteur. Mais un seul 
+                univers me passionne vraiment :{" "}
+                <span className="font-bold text-green-600">la santé</span>.
               </p>
-              
-              {/* Citation */}
-              <blockquote className="italic text-base md:text-xl font-medium text-gray-800 border-l-4 border-blue-500 pl-3 md:pl-4 py-2 md:py-3 bg-blue-50 rounded-r-lg">
-                « J'aime soigner. Ma manière de soigner, c'est d'aider chaque mois des cliniques 
-                médicales à faire entendre leur voix partout, et avoir plus de patients à tout moment 
-                grâce à un site web personnalisé à leur image. »
+
+              {/* Citation puissante */}
+              <blockquote className="italic text-base md:text-lg font-medium text-gray-800 border-l-4 border-blue-500 pl-3 md:pl-4 py-2 md:py-3 bg-blue-50 rounded-r-lg">
+                « Ma manière de soigner ? Offrir à chaque clinique une voix puissante 
+                sur Internet. Pour que chaque patient qui a besoin de vous vous trouve 
+                immédiatement, et vous choisisse en toute confiance. »
               </blockquote>
-              
+
+              {/* Concret */}
               <p>
-                Mon objectif est simple : vous donner une présence en ligne qui reflète 
-                l'excellence de vos soins, attire naturellement les patients et renforce 
-                votre crédibilité dans le monde médical.
+                <span className="font-semibold">Concrètement, voici ce que je vous apporte :</span>
+              </p>
+              
+              <ul className="space-y-2">
+                {[
+                  "Un site qui vous ressemble et inspire confiance en 3 secondes",
+                  "Une visibilité immédiate sur Google quand un patient cherche votre spécialité",
+                  "La réservation en ligne qui remplit votre agenda, même quand vous dormez",
+                  "Une présence qui fait paraître vos concurrents obsolètes"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 md:gap-3">
+                    <span className="text-green-500 font-bold text-lg mt-0.5 flex-shrink-0">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Rassurance finale */}
+              <p className="font-semibold text-gray-900">
+                Mon seul objectif : que votre clinique attire autant de patients 
+                que la qualité de vos soins le mérite.
               </p>
             </div>
 
@@ -277,7 +312,7 @@ function About() {
               {[
                 { icon: "🎯", text: "Spécialiste cliniques" },
                 { icon: "💚", text: "Passionné de santé" },
-                { icon: "🤝", text: "Accompagnement dédié" }
+                { icon: "🤝", text: "Suivi personnalisé" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 md:gap-3 bg-white rounded-xl p-3 md:p-4 shadow-md">
                   <span className="text-xl md:text-2xl">{item.icon}</span>
@@ -286,14 +321,17 @@ function About() {
               ))}
             </div>
 
-            {/* CTA */}
+            {/* CTA PLUS FORT */}
             <div className="pt-2 md:pt-4 text-center lg:text-left">
               <a 
                 href="#contact" 
-                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-lg hover:shadow-xl transition-all"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-lg hover:shadow-xl transition-all hover:scale-105"
               >
-                <span className="mr-2">💬</span> Discutons de votre projet
+                <span className="mr-2">💬</span> Parlons de votre clinique maintenant
               </a>
+              <p className="text-xs text-gray-500 mt-2 text-center lg:text-left">
+                ⏱️ Réponse en moins de 5 minutes
+              </p>
             </div>
           </motion.div>
         </div>
@@ -306,10 +344,10 @@ function About() {
           viewport={{ once: true }}
         >
           {[
-            { number: "3+", label: "Années d'expertise", icon: "📅" },
-            { number: "50+", label: "Cliniques accompagnées", icon: "🏥" },
-            { number: "100%", label: "Satisfaction client", icon: "⭐" },
-            { number: "24h", label: "Support réactif", icon: "⚡" }
+            { number: "3+", label: "Années à vos côtés", icon: "📅" },
+            { number: "50+", label: "Cliniques propulsées", icon: "🏥" },
+            { number: "100%", label: "Clients satisfaits", icon: "⭐" },
+            { number: "24h", label: "Disponibilité", icon: "⚡" }
           ].map((stat, i) => (
             <div key={i} className="bg-white rounded-2xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
               <span className="text-2xl md:text-3xl mb-2 md:mb-3 block">{stat.icon}</span>
