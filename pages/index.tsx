@@ -418,8 +418,7 @@ function Testimonials() {
 // ==================== EXEMPLES DE CLINIQUES EN LIGNE ====================
 function OnlineClinicsExamples() {
   const clinics = [
-
-  {
+    {
       name: "Centre Médical LA RETINE",
       url: "https://cmlaretine.com",
       description: "Plateforme digitale complète pour attirer et rassurer les nouveaux patients",
@@ -450,7 +449,7 @@ function OnlineClinicsExamples() {
       features: ["Présentation des spécialistes", "Horaires visibles", "Galerie photos", "Contact facile"],
       icon: "🏥",
       color: "from-blue-500 to-green-500"
-    },
+    }
   ];
 
   const stats = [
@@ -508,6 +507,30 @@ function OnlineClinicsExamples() {
           ))}
         </motion.div>
 
+        {/* ===== TEXTE D'INTRODUCTION AVANT LES EXEMPLES ===== */}
+        <motion.div
+          className="w-full max-w-4xl mx-auto text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+            <div className="text-4xl mb-4">🏥</div>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+              Voici des exemples concrets de cliniques qui ont déjà leur site web professionnel
+            </h3>
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              Ces cliniques existent vraiment. Elles ont compris qu'un site web n'est pas un luxe, 
+              mais un outil indispensable pour attirer des patients et inspirer confiance. 
+              <span className="font-semibold text-blue-600"> Cliquez sur chaque exemple pour visiter leur site.</span>
+            </p>
+            <div className="flex items-center justify-center space-x-2 mt-4 text-sm text-gray-500">
+              <span>👆</span>
+              <span>Ce sont de vrais sites de cliniques, visibles et accessibles à tous</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Grille des cliniques exemples */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
           {clinics.map((clinic, i) => (
@@ -555,7 +578,7 @@ function OnlineClinicsExamples() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group/link"
                     >
-                      <span>Visiter le site</span>
+                      <span>🔗 Visiter le site</span>
                       <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>

@@ -1,8 +1,8 @@
 const config = {
   name: "Votre Clinique en ligne",
   subtitle: "Centre Médical Pluridisciplinaire",
-  city: "Paris",
-  address: "123 Avenue des Champs-Élysées, 75008 Paris",
+  city: "Cotonou",
+  address: "Cotonou, Bénin",
   phone: "+22962278090",
   whatsapp: "22962278090",
   email: "patawalaabdoulaye2003@gmail.com",
