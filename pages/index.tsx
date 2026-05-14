@@ -171,6 +171,146 @@ function Problems() {
   );
 }
 
+// ==================== ABOUT ====================
+function About() {
+  return (
+    <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-green-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Qui se cache derrière votre site web</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Un expert passionné par la santé et le digital, à votre service depuis 3 ans</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <div className="relative">
+              {/* Cercle décoratif derrière la photo */}
+              <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl"></div>
+              
+              {/* Photo */}
+              <div className="relative w-80 h-80 md:w-96 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/moi.jpeg" 
+                  alt="Abdoulaye Patawala - Expert en création de sites web pour cliniques"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Badge expérience */}
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl p-4 text-center">
+                <div className="text-3xl font-bold text-blue-600">3+</div>
+                <div className="text-sm text-gray-600">années d'expérience</div>
+              </div>
+              
+              {/* Badge cliniques */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 text-center">
+                <div className="text-3xl font-bold text-green-600">50+</div>
+                <div className="text-sm text-gray-600">cliniques satisfaites</div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bio */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                Abdoulaye Patawala
+              </h3>
+              <p className="text-blue-600 font-semibold text-lg">
+                Expert en création de sites web pour cliniques médicales
+              </p>
+            </div>
+
+            <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+              <p>
+                Depuis <span className="font-semibold">3 ans</span>, j'ai créé des <span className="font-semibold">dizaines de sites web</span> pour des cliniques 
+                qui souhaitent développer leur activité et attirer plus de patients.
+              </p>
+              
+              <p>
+                Expert technique en création de sites web, il y a un univers qui me passionne plus 
+                que tout : <span className="font-semibold text-blue-600">la santé</span>. 
+              </p>
+              
+              <p className="italic text-xl font-medium text-gray-800 border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg">
+                « J'aime soigner. Ma manière de soigner, c'est d'aider chaque mois des cliniques 
+                médicales à faire entendre leur voix partout, et avoir plus de patients à tout moment 
+                grâce à un site web personnalisé à leur image. »
+              </p>
+              
+              <p>
+                Mon objectif est simple : vous donner une présence en ligne qui reflète 
+                l'excellence de vos soins, attire naturellement les patients et renforce 
+                votre crédibilité dans le monde médical.
+              </p>
+            </div>
+
+            {/* Points de confiance */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              {[
+                { icon: "🎯", text: "Spécialiste cliniques" },
+                { icon: "💚", text: "Passionné de santé" },
+                { icon: "🤝", text: "Accompagnement dédié" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-md">
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="text-gray-700 font-medium">{item.text}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="pt-4">
+              <a 
+                href="#contact" 
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+              >
+                <span className="mr-2">💬</span> Discutons de votre projet
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Chiffres clés */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          {[
+            { number: "3+", label: "Années d'expertise", icon: "📅" },
+            { number: "50+", label: "Cliniques accompagnées", icon: "🏥" },
+            { number: "100%", label: "Satisfaction client", icon: "⭐" },
+            { number: "24h", label: "Support réactif", icon: "⚡" }
+          ].map((stat, i) => (
+            <div key={i} className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <span className="text-3xl mb-3 block">{stat.icon}</span>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+              <div className="text-gray-600 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 // ==================== COMPARISON ====================
 function Comparison() {
   return (
@@ -821,6 +961,7 @@ export default function Home() {
       <main>
         <Hero />
         <Problems />
+        <About />  
         <Comparison />
         <Benefits />
         <Opportunities />
