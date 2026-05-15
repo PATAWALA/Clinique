@@ -10,8 +10,8 @@ const config = {
   stats: {
     patientsLost: 50,
     callsLost: 30,
-    revenueLost: 90000,
-    annualLoss: 1080000,
+    revenueLost: 125000,
+    annualLoss: 1500000,
   }
 };
 
