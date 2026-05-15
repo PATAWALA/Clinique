@@ -1015,11 +1015,20 @@ function Footer() {
 export default function Home() {
   return (
     <div className="bg-gray-50">
-      <Head>
-        <title>Votre Clinique en ligne | Site web professionnel pour cliniques médicales</title>
-        <meta name="description" content="Votre Clinique en ligne crée des sites web professionnels pour les cliniques. Attirez plus de patients, gagnez en crédibilité et développez votre activité médicale." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+<Head>
+  <title>Abdoulaye Patawala | Sites web professionnels pour cliniques médicales</title>
+  <meta name="description" content="Expert en création de sites web pour cliniques depuis 3 ans. J'aide les cliniques à attirer plus de patients, gagner en crédibilité et développer leur activité grâce à une présence en ligne professionnelle. 50+ cliniques accompagnées." />
+  <meta name="keywords" content="site web clinique, création site médical, site internet médecin, référencement clinique, Abdoulaye Patawala" />
+  <meta name="author" content="Abdoulaye Patawala" />
+  
+  {/* Open Graph pour le partage sur les réseaux sociaux */}
+  <meta property="og:title" content="Abdoulaye Patawala | Sites web pour cliniques médicales" />
+  <meta property="og:description" content="50+ cliniques accompagnées. Je crée votre site web professionnel pour attirer plus de patients." />
+  <meta property="og:type" content="website" />
+  
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
 
       <Navbar />
       
