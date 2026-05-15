@@ -209,7 +209,7 @@ function About() {
               
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/moi.jpeg" 
+                  src="/images/moi.jpg" 
                   alt="Abdoulaye Patawala - Expert sites web cliniques"
                   className="w-full h-full object-cover"
                 />
@@ -244,7 +244,7 @@ function About() {
               </p>
             </div>
 
-            {/* Corps du message - PLUS PUNCHY */}
+            {/* Corps du message */}
             <div className="space-y-4 text-gray-700 text-sm md:text-lg leading-relaxed">
               
               {/* Problème → Solution */}
@@ -300,6 +300,21 @@ function About() {
                 ))}
               </ul>
 
+              {/* CRÉDIBILITÉ - NOUVEAU PARAGRAPHE */}
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-3 md:p-4 rounded-r-lg">
+                <p className="font-semibold text-blue-900 text-sm md:text-base">
+                  🔑 Pourquoi la crédibilité est tout pour une clinique :
+                </p>
+                <p className="text-blue-800 text-xs md:text-sm mt-2">
+                  Sans crédibilité, une clinique ne peut ni attirer de nouveaux patients, 
+                  ni signer de contrats avec des partenaires, ni fidéliser sa patientèle. 
+                  Aujourd'hui, <span className="font-bold">la première chose qu'un patient vérifie avant de prendre rendez-vous, c'est votre présence en ligne</span>. 
+                  Un site web professionnel devient la preuve immédiate que votre clinique 
+                  est sérieuse, fiable et digne de confiance. C'est votre réputation 
+                  numérique, et elle se joue en quelques secondes.
+                </p>
+              </div>
+
               {/* Rassurance finale */}
               <p className="font-semibold text-gray-900">
                 Mon seul objectif : que votre clinique attire autant de patients 
@@ -321,16 +336,17 @@ function About() {
               ))}
             </div>
 
-            {/* CTA PLUS FORT */}
+            {/* CTA WhatsApp - BOUTON MODIFIÉ */}
             <div className="pt-2 md:pt-4 text-center lg:text-left">
               <a 
-                href="#contact" 
-                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-lg hover:shadow-xl transition-all hover:scale-105"
+                href={`https://wa.me/${config.whatsapp}?text=Bonjour%20Abdoulaye%2C%20je%20souhaite%20prendre%20un%20rendez-vous%20gratuit%20pour%20discuter%20de%20mon%20site%20web.`}
+                target="_blank"
+                className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
-                <span className="mr-2">💬</span> Parlons de votre clinique maintenant
+                <span className="mr-2 text-xl">📅</span> Prendre un rendez-vous gratuit
               </a>
               <p className="text-xs text-gray-500 mt-2 text-center lg:text-left">
-                ⏱️ Réponse en moins de 5 minutes
+                ⏱️ Je vous réponds personnellement en quelques minutes sur WhatsApp
               </p>
             </div>
           </motion.div>
