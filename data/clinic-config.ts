@@ -21,7 +21,7 @@ const config = {
   
   // Réseaux sociaux (modifie avec tes vrais liens)
   social: {
-    facebook: "https://web.facebook.com/Patawala",
+    facebook: "https://web.facebook.com/photo/?fbid=122145686450978126&set=a.122108099630978126",
     instagram: "https://www.instagram.com/patawalaabdoulaye1900/",
     linkedin: "https://www.linkedin.com/in/abdoulaye-patawala-84b138381/",
   }
