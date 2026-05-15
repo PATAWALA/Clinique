@@ -218,7 +218,7 @@ function Problems() {
 // ==================== ABOUT ====================
 function About() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-green-50">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-green-50" id='about'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Titre */}
         <motion.div 
