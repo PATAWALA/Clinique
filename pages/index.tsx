@@ -127,19 +127,16 @@ function Hero() {
                 number: "50+", 
                 label: "cliniques accompagnées en 3 ans", 
                 icon: "🏥",
-                detail: "Dans toute la France"
               },
               { 
                 number: "89%", 
                 label: "des patients vérifient en ligne avant de consulter", 
                 icon: "📱",
-                detail: "Étude Doctolib 2024"
               },
               { 
                 number: "3x", 
                 label: "plus de rendez-vous avec un site web optimisé", 
                 icon: "📈",
-                detail: "Résultat moyen constaté"
               }
             ].map((stat, i) => (
               <motion.div
@@ -152,7 +149,6 @@ function Hero() {
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600 text-base md:text-lg mb-1">{stat.label}</div>
-                <div className="text-gray-400 text-xs">{stat.detail}</div>
               </motion.div>
             ))}
           </div>
