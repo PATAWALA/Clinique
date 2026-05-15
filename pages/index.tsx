@@ -209,7 +209,7 @@ function About() {
               
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/moi.jpg" 
+                  src="/images/moi.jpeg" 
                   alt="Abdoulaye Patawala - Expert sites web cliniques"
                   className="w-full h-full object-cover"
                 />
