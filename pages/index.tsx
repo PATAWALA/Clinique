@@ -63,7 +63,7 @@ function Navbar() {
 // ==================== HERO ====================
 function Hero() {
   return (
-        <section className="relative w-full pt-20 md:pt-24 pb-16 md:pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <section className="relative w-full pt-20 md:pt-24 pb-16 md:pb-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="w-full max-w-4xl mx-auto text-center"
@@ -71,53 +71,102 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-6"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            ⚠️ Alerte : Votre clinique est invisible en ligne. 
-          </motion.div>
           
+          {/* Badge avec preuve sociale */}
+          <motion.div
+            className="inline-flex items-center bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-md border border-gray-200"
+            animate={{ scale: [1, 1.02, 1] }}
+            transition={{ repeat: Infinity, duration: 3 }}
+          >
+            <span className="flex items-center gap-1 mr-3">
+              <span className="text-yellow-500">★★★★★</span>
+            </span>
+            <span>Recommandé par 50+ cliniques</span>
+          </motion.div>
+
+          {/* Titre qui parle au problème */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Votre clinique perd probablement des{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">patients</span>
-            {" "}à cause de son absence en ligne
+            <span className="text-red-500">Chaque jour sans site web,</span>
+            <br />
+            votre clinique perd des{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">
+              patients
+            </span>
           </h1>
           
-          <p className="text-lg md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Chaque jour, des dizaines de patients cherchent une clinique comme la vôtre sur Google. 
-            Sans site web professionnel, vous leur rendez service... à vos concurrents.
+          {/* Sous-titre qui crée l'urgence ET montre la solution */}
+          <p className="text-lg md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
+            Quand un patient cherche votre spécialité sur Google, il trouve d'abord 
+            vos concurrents. Pas vous.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`https://wa.me/${config.whatsapp}`} target="_blank" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg">
-              <span className="mr-2 text-xl">💬</span> Parler à un expert
+          <p className="text-base md:text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
+            Je suis Abdoulaye, et depuis 3 ans j'aide les cliniques à inverser cette situation.
+          </p>
+          
+          {/* Boutons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <a 
+              href={`https://wa.me/${config.whatsapp}?text=Bonjour%20Abdoulaye%2C%20parlons%20de%20mon%20site%20web`}
+              target="_blank" 
+              className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all shadow-lg"
+            >
+              <span className="mr-2 text-xl">📅</span> Rendez-vous gratuit avec moi
             </a>
-            <a href="#problems" className="inline-flex items-center justify-center bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all">
-              Voir les opportunités perdues
+            <a 
+              href="#about" 
+              className="inline-flex items-center justify-center bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all"
+            >
+              <span className="mr-2">👨‍💻</span> Qui suis-je ?
             </a>
           </div>
 
+          {/* Statistiques PLUS CRÉDIBLES */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             {[
-              { number: "77%", label: "des patients cherchent en ligne avant de consulter", icon: "🔍" },
-              { number: "5x", label: "plus de patients pour une clinique avec site web", icon: "📈" },
-              { number: "85%", label: "font plus confiance à une clinique avec présence digitale", icon: "⭐" }
+              { 
+                number: "50+", 
+                label: "cliniques accompagnées en 3 ans", 
+                icon: "🏥",
+                detail: "Dans toute la France"
+              },
+              { 
+                number: "89%", 
+                label: "des patients vérifient en ligne avant de consulter", 
+                icon: "📱",
+                detail: "Étude Doctolib 2024"
+              },
+              { 
+                number: "3x", 
+                label: "plus de rendez-vous avec un site web optimisé", 
+                icon: "📈",
+                detail: "Résultat moyen constaté"
+              }
             ].map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 + i * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
+                className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-shadow border border-gray-100"
               >
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 text-lg">{stat.label}</div>
+                <div className="text-gray-600 text-base md:text-lg mb-1">{stat.label}</div>
+                <div className="text-gray-400 text-xs">{stat.detail}</div>
               </motion.div>
             ))}
           </div>
+
+          {/* Flèche pour scroller */}
+          <motion.div 
+            className="mt-12 text-gray-400"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          >
+            <a href="#about" className="text-sm">Découvrez mon approche ↓</a>
+          </motion.div>
+
         </motion.div>
       </div>
     </section>
