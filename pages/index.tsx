@@ -107,11 +107,10 @@ function Hero() {
           {/* Boutons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <a 
-              href={`https://wa.me/${config.whatsapp}?text=Bonjour%20Abdoulaye%2C%20parlons%20de%20mon%20site%20web`}
-              target="_blank" 
-              className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all shadow-lg"
+              href="#problems" 
+              className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all shadow-lg"
             >
-              <span className="mr-2 text-xl">📅</span> Rendez-vous gratuit avec moi
+              <span className="mr-2">📉</span> Voir les opportunités perdues
             </a>
             <a 
               href="#about" 
@@ -164,7 +163,7 @@ function Hero() {
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <a href="#about" className="text-sm">Découvrez mon approche ↓</a>
+            <span className="text-sm">Découvrez les opportunités que vous perdez ↓</span>
           </motion.div>
 
         </motion.div>
@@ -223,7 +222,7 @@ function Problems() {
 // ==================== ABOUT ====================
 function About() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-green-50" id='about'>
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Titre */}
         <motion.div 
